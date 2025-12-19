@@ -52,7 +52,7 @@ function analyzeSalesData(data, options) {
     if (!options || typeof options !== "object") {
         throw new Error('Не переданы опции');
     }
-    if (!data.sellers || !data.products || !data.purchase_records) {
+    if (!data.sellers || !data.products || !data.purchase_records || !data.purchase_records.length) {
         throw new Error('Дата должная содержать свойства sellers, products, purchase_records');
     }
     // @TODO: Подготовка промежуточных данных для сбора статистики
